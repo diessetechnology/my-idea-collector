@@ -1,0 +1,45 @@
+{
+  "name": "my-idea-collector",
+  "version": "2.1.1",
+  "description": "Smart collecting your ideas,rank them,mark them as completed,and insert pros,cons,risks and rewards",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint --fix **/src/",
+    "precommit": "npm test",
+    "prepush": "npm test",
+    "heroku:add": "heroku git:remote -a",
+    "deploy:heroku": "git subtree push --prefix server heroku master",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amazingandyyy/mern.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Davide Salamino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amazingandyyy/mern/issues"
+  },
+  "homepage": "https://github.com/amazingandyyy/mern#readme",
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-logux": "^17.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-es5": "^1.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.5.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {}
+}
