@@ -1,4 +1,6 @@
 {
+	"dashboard": "Dashboard",
 	"signin": "Sign In",
+	"signout": "Sign Out",
 	"signup": "Sign Up"
 }

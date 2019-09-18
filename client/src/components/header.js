@@ -8,12 +8,12 @@ import {withTranslation} from "react-i18next";
 
 class Header extends Component {
 
-
     renderSignButton() {
+        const { t } = this.props;
         if (this.props.authenticated) {
             return (
                 <li className="nav-item">
-                    <NavLink className="nav-link" to="/signout">Sign out</NavLink>
+                    <NavLink className="nav-link" to="/signout">{t("signout")}</NavLink>
                 </li>
             )
         } else {
@@ -31,6 +31,7 @@ class Header extends Component {
     }
 
     render() {
+        const { t } = this.props;
         return (
             <nav className="navbar navbar-expand-sm navbar-light bg-light">
                 <NavLink className="navbar-brand" to="/">My Idea Collector</NavLink>
@@ -41,7 +42,7 @@ class Header extends Component {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/public">Public</NavLink>
+                            <NavLink className="nav-link" to="/public">{t("dashboard")}</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/account">Account</NavLink>

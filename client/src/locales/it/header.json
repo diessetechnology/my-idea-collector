@@ -1,4 +1,6 @@
 {
+	"dashboard": "Bacheca",
 	"signin": "Accedi",
+	"signout": "Esci",
 	"signup": "Registrati"
 }
